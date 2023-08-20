@@ -40,13 +40,21 @@ mixin _$TodoDTO {
 
 /// @nodoc
 abstract class $TodoDTOCopyWith<$Res> {
-  factory $TodoDTOCopyWith(TodoDTO value, $Res Function(TodoDTO) then) = _$TodoDTOCopyWithImpl<$Res, TodoDTO>;
+  factory $TodoDTOCopyWith(TodoDTO value, $Res Function(TodoDTO) then) =
+      _$TodoDTOCopyWithImpl<$Res, TodoDTO>;
   @useResult
-  $Res call({int id, DateTime createdTime, DateTime? modifyTime, String title, DateTime dueDate, TodoStatus status});
+  $Res call(
+      {int id,
+      DateTime createdTime,
+      DateTime? modifyTime,
+      String title,
+      DateTime dueDate,
+      TodoStatus status});
 }
 
 /// @nodoc
-class _$TodoDTOCopyWithImpl<$Res, $Val extends TodoDTO> implements $TodoDTOCopyWith<$Res> {
+class _$TodoDTOCopyWithImpl<$Res, $Val extends TodoDTO>
+    implements $TodoDTOCopyWith<$Res> {
   _$TodoDTOCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -95,16 +103,26 @@ class _$TodoDTOCopyWithImpl<$Res, $Val extends TodoDTO> implements $TodoDTOCopyW
 
 /// @nodoc
 abstract class _$$_TodoDTOCopyWith<$Res> implements $TodoDTOCopyWith<$Res> {
-  factory _$$_TodoDTOCopyWith(_$_TodoDTO value, $Res Function(_$_TodoDTO) then) = __$$_TodoDTOCopyWithImpl<$Res>;
+  factory _$$_TodoDTOCopyWith(
+          _$_TodoDTO value, $Res Function(_$_TodoDTO) then) =
+      __$$_TodoDTOCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, DateTime createdTime, DateTime? modifyTime, String title, DateTime dueDate, TodoStatus status});
+  $Res call(
+      {int id,
+      DateTime createdTime,
+      DateTime? modifyTime,
+      String title,
+      DateTime dueDate,
+      TodoStatus status});
 }
 
 /// @nodoc
-class __$$_TodoDTOCopyWithImpl<$Res> extends _$TodoDTOCopyWithImpl<$Res, _$_TodoDTO>
+class __$$_TodoDTOCopyWithImpl<$Res>
+    extends _$TodoDTOCopyWithImpl<$Res, _$_TodoDTO>
     implements _$$_TodoDTOCopyWith<$Res> {
-  __$$_TodoDTOCopyWithImpl(_$_TodoDTO _value, $Res Function(_$_TodoDTO) _then) : super(_value, _then);
+  __$$_TodoDTOCopyWithImpl(_$_TodoDTO _value, $Res Function(_$_TodoDTO) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -147,17 +165,17 @@ class __$$_TodoDTOCopyWithImpl<$Res> extends _$TodoDTOCopyWithImpl<$Res, _$_Todo
 
 /// @nodoc
 @JsonSerializable()
-class _$_TodoDTO extends _TodoDTO {
+class _$_TodoDTO implements _TodoDTO {
   _$_TodoDTO(
       {required this.id,
       required this.createdTime,
       this.modifyTime,
       required this.title,
       required this.dueDate,
-      this.status = TodoStatus.unknown})
-      : super._();
+      this.status = TodoStatus.unknown});
 
-  factory _$_TodoDTO.fromJson(Map<String, dynamic> json) => _$$_TodoDTOFromJson(json);
+  factory _$_TodoDTO.fromJson(Map<String, dynamic> json) =>
+      _$$_TodoDTOFromJson(json);
 
   @override
   int id;
@@ -181,7 +199,8 @@ class _$_TodoDTO extends _TodoDTO {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_TodoDTOCopyWith<_$_TodoDTO> get copyWith => __$$_TodoDTOCopyWithImpl<_$_TodoDTO>(this, _$identity);
+  _$$_TodoDTOCopyWith<_$_TodoDTO> get copyWith =>
+      __$$_TodoDTOCopyWithImpl<_$_TodoDTO>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -191,7 +210,7 @@ class _$_TodoDTO extends _TodoDTO {
   }
 }
 
-abstract class _TodoDTO extends TodoDTO {
+abstract class _TodoDTO implements TodoDTO {
   factory _TodoDTO(
       {required int id,
       required DateTime createdTime,
@@ -199,7 +218,6 @@ abstract class _TodoDTO extends TodoDTO {
       required String title,
       required DateTime dueDate,
       TodoStatus status}) = _$_TodoDTO;
-  _TodoDTO._() : super._();
 
   factory _TodoDTO.fromJson(Map<String, dynamic> json) = _$_TodoDTO.fromJson;
 
@@ -223,5 +241,6 @@ abstract class _TodoDTO extends TodoDTO {
   set status(TodoStatus value);
   @override
   @JsonKey(ignore: true)
-  _$$_TodoDTOCopyWith<_$_TodoDTO> get copyWith => throw _privateConstructorUsedError;
+  _$$_TodoDTOCopyWith<_$_TodoDTO> get copyWith =>
+      throw _privateConstructorUsedError;
 }

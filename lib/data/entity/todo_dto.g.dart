@@ -9,13 +9,17 @@ part of 'todo_dto.dart';
 _$_TodoDTO _$$_TodoDTOFromJson(Map<String, dynamic> json) => _$_TodoDTO(
       id: json['id'] as int,
       createdTime: DateTime.parse(json['createdTime'] as String),
-      modifyTime: json['modifyTime'] == null ? null : DateTime.parse(json['modifyTime'] as String),
+      modifyTime: json['modifyTime'] == null
+          ? null
+          : DateTime.parse(json['modifyTime'] as String),
       title: json['title'] as String,
       dueDate: DateTime.parse(json['dueDate'] as String),
-      status: $enumDecodeNullable(_$TodoStatusEnumMap, json['status']) ?? TodoStatus.unknown,
+      status: $enumDecodeNullable(_$TodoStatusEnumMap, json['status']) ??
+          TodoStatus.unknown,
     );
 
-Map<String, dynamic> _$$_TodoDTOToJson(_$_TodoDTO instance) => <String, dynamic>{
+Map<String, dynamic> _$$_TodoDTOToJson(_$_TodoDTO instance) =>
+    <String, dynamic>{
       'id': instance.id,
       'createdTime': instance.createdTime.toIso8601String(),
       'modifyTime': instance.modifyTime?.toIso8601String(),
