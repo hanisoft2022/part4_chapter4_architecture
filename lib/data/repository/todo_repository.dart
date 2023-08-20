@@ -4,7 +4,6 @@ import 'package:fast_app_base/data/mapper.dart';
 import 'package:fast_app_base/data/source/local/error/local_db_error.dart';
 import 'package:fast_app_base/data/source/remote/result/api_error.dart';
 import 'package:fast_app_base/domain/domain.dart';
-import 'package:fast_app_base/domain/model/model.dart';
 import 'package:get/get.dart';
 import 'package:isar/isar.dart';
 

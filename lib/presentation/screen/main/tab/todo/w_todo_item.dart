@@ -6,6 +6,7 @@ import 'package:fast_app_base/presentation/screen/main/tab/todo/w_todo_status.da
 import 'package:flutter/material.dart';
 
 import '../../../../../common/widget/w_rounded_container.dart';
+import '../controller/todo_data.dart';
 
 class TodoItem extends StatelessWidget with TodoDataProvider {
   final Todo todo;

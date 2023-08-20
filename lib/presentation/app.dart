@@ -4,7 +4,7 @@ import 'package:fast_app_base/presentation/screen/main/s_main.dart';
 import 'package:flutter/material.dart';
 import 'package:get/instance_manager.dart';
 
-import '../data/memory/todo_data.dart';
+import 'screen/main/tab/controller/todo_data.dart';
 
 class App extends StatefulWidget {
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
