@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../data/entity/todo_status.dart';
+import 'todo_status.dart';
 
 part 'todo.freezed.dart';
 part 'todo.g.dart';
