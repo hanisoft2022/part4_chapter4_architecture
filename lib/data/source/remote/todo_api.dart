@@ -6,7 +6,7 @@ import 'package:dio/dio.dart' hide Headers;
 ///retrofit Headers를 사용하기 위해 dio의 Headers를 숨김
 import 'package:retrofit/retrofit.dart';
 
-import '../../../domain/model/vo_todo.dart';
+import '../../entity/todo_dto.dart';
 import 'dio/dio_json_response_converter.dart';
 
 part 'todo_api.g.dart';
@@ -19,13 +19,13 @@ abstract class TodoApi {
   }
 
   @GET('/todo')
-  Future<List<Todo>> getTodoList();
+  Future<List<TodoDTO>> getTodoList();
 
   @POST('/todo')
-  Future<void> addTodo(@Body() Todo todo);
+  Future<void> addTodo(@Body() TodoDTO todo);
 
   @PUT('/todo')
-  Future<void> updateTodo(@Body() Todo todo);
+  Future<void> updateTodo(@Body() TodoDTO todo);
 
   @DELETE('/todo')
   @Headers(<String, dynamic>{

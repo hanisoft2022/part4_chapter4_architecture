@@ -19,12 +19,12 @@ class _TodoApi implements TodoApi {
   String? baseUrl;
 
   @override
-  Future<List<Todo>> getTodoList() async {
+  Future<List<TodoDTO>> getTodoList() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result = await _dio.fetch<List<dynamic>>(_setStreamType<List<Todo>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(_setStreamType<List<TodoDTO>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -40,12 +40,12 @@ class _TodoApi implements TodoApi {
           _dio.options.baseUrl,
           baseUrl,
         ))));
-    var value = _result.data!.map((dynamic i) => Todo.fromJson(i as Map<String, dynamic>)).toList();
+    var value = _result.data!.map((dynamic i) => TodoDTO.fromJson(i as Map<String, dynamic>)).toList();
     return value;
   }
 
   @override
-  Future<void> addTodo(Todo todo) async {
+  Future<void> addTodo(TodoDTO todo) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
@@ -70,7 +70,7 @@ class _TodoApi implements TodoApi {
   }
 
   @override
-  Future<void> updateTodo(Todo todo) async {
+  Future<void> updateTodo(TodoDTO todo) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};

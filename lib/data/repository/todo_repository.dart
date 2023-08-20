@@ -22,14 +22,14 @@ class TodoRemoteRepository implements TodoRepository<ApiError> {
   Future<SimpleResult<List<Todo>, ApiError>> getTodoList() async {
     return tryRequest(() async {
       final todoList = await _api.getTodoList();
-      return SimpleResult.success(todoList);
+      return SimpleResult.success(todoList.map((e) => e.toModel()).toList());
     });
   }
 
   @override
   Future<SimpleResult<void, ApiError>> addTodo(Todo todo) async {
     return tryRequest(() async {
-      await _api.addTodo(todo);
+      await _api.addTodo(todo.toDTO());
       return SimpleResult.success();
     });
   }
@@ -37,7 +37,7 @@ class TodoRemoteRepository implements TodoRepository<ApiError> {
   @override
   Future<SimpleResult<void, ApiError>> updateTodo(Todo todo) async {
     return tryRequest(() async {
-      await _api.updateTodo(todo);
+      await _api.updateTodo(todo.toDTO());
       return SimpleResult.success();
     });
   }
