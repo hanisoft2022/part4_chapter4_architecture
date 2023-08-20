@@ -16,8 +16,26 @@ Chapter 4. 아키텍처
 ### 학습 순서.
 
 1. 최대한 이해해보려고 노력하면서 강의 내용 다 보기.
-    - 클린아키텍처 적용된 샘플 프로젝트 분석
-    - 기존 프로젝트에 적용
+   - 클린아키텍처 적용된 샘플 프로젝트 분석
+   - 기존 프로젝트에 적용
 2. 원칙들을 학습하고 이해하면서 따라하기.
 3. 각자 실습 프로젝트에 적용해보기.
 4. 여러 고민해보고 여러분만의 아키텍처 만들기.
+
+### 적용 순서
+
+1. 아키텍처에 맞게 프로젝트 폴더링
+   - presentation
+   - data
+   - domain
+2. presentation
+   - presenter
+3. data
+   - entity
+   - source(remote, local)
+   - repository
+4. domain
+   - model
+   - repository
+   - use case
+5. DI
