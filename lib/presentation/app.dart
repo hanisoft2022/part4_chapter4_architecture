@@ -1,7 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/custom_theme_app.dart';
 import 'package:fast_app_base/data/data.dart';
-import 'package:fast_app_base/data/source/local/todo_db.dart';
 import 'package:fast_app_base/domain/repository/repository.dart';
 import 'package:fast_app_base/presentation/screen/main/s_main.dart';
 import 'package:fast_app_base/presentation/screen/main/tab/controller/todo_controller.dart';
