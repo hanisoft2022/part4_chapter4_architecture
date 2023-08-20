@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
 import 'package:nav/enum/enum_nav_ani.dart';
 
-import '../../../common/widget/bottom_dialog_scaffold.dart';
-import '../../../data/memory/vo_todo.dart';
-import '../../../data/memory/vo_todo_write_result.dart';
+import '../../../../common/widget/bottom_dialog_scaffold.dart';
+import '../../../../data/memory/vo_todo.dart';
+import '../../../../data/memory/vo_todo_write_result.dart';
 
 class WriteTodoBottomSheet extends DialogWidget<SimpleResult<TodoWriteResult, void>> {
   final Todo? todoForEdit;
@@ -124,7 +124,6 @@ class _WriteTodoBottomSheetState extends DialogState<WriteTodoBottomSheet> with 
       return;
     }
 
-    widget.hide(SimpleResult.success(
-        TodoWriteResult(title: todoTextEditingController.text, dueDate: _selectedDate)));
+    widget.hide(SimpleResult.success(TodoWriteResult(title: todoTextEditingController.text, dueDate: _selectedDate)));
   }
 }

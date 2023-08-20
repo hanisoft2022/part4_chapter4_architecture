@@ -7,10 +7,10 @@ import 'package:get/get_utils/src/extensions/string_extensions.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
 import '../../../presentation/screen/dialog/d_message.dart';
-import '../../common/common.dart';
-import '../../common/language/language.dart';
-import '../../common/theme/theme_util.dart';
-import '../../common/widget/w_mode_switch.dart';
+import '../../../common/common.dart';
+import '../../../common/language/language.dart';
+import '../../../common/theme/theme_util.dart';
+import '../../../common/widget/w_mode_switch.dart';
 
 class MenuDrawer extends StatefulWidget {
   static const minHeightForScrollView = 380;
