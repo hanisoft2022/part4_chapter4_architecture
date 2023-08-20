@@ -2,9 +2,9 @@ import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/common/util/async/flutter_async.dart';
 import 'package:fast_app_base/data/memory/todo_status.dart';
 import 'package:fast_app_base/data/memory/vo_todo.dart';
-import 'package:fast_app_base/screen/dialog/d_confirm.dart';
-import 'package:fast_app_base/screen/dialog/d_message.dart';
-import 'package:fast_app_base/screen/main/write/d_write_todo.dart';
+import 'package:fast_app_base/presentation/screen/dialog/d_confirm.dart';
+import 'package:fast_app_base/presentation/screen/dialog/d_message.dart';
+import 'package:fast_app_base/presentation/screen/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -7,7 +7,7 @@
 
 import 'dart:io';
 
-import 'package:fast_app_base/app.dart';
+import 'package:fast_app_base/presentation/app.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/data/preference/app_preferences.dart';
 import 'package:fast_app_base/common/language/language.dart';
