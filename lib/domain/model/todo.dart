@@ -1,10 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'todo_db_model.dart';
-import 'todo_status.dart';
+import '../../data/entity/todo_status.dart';
 
-part 'vo_todo.freezed.dart';
-part 'vo_todo.g.dart';
+part 'todo.freezed.dart';
+part 'todo.g.dart';
 
 @unfreezed
 class Todo with _$Todo {
@@ -20,6 +19,4 @@ class Todo with _$Todo {
   }) = _Todo;
 
   factory Todo.fromJson(Map<String, Object?> json) => _$TodoFromJson(json);
-
-  TodoDbModel get dbModel => TodoDbModel(id, createdTime, modifyTime, title, dueDate, status);
 }

@@ -1,12 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/data/mapper.dart';
 import 'package:fast_app_base/data/source/local/error/local_db_error.dart';
 import 'package:fast_app_base/data/source/remote/result/api_error.dart';
 import 'package:fast_app_base/domain/domain.dart';
+import 'package:fast_app_base/domain/model/model.dart';
 import 'package:get/get.dart';
 import 'package:isar/isar.dart';
 
-import '../entity/vo_todo.dart';
 import '../simple_result.dart';
 import '../source/local/todo_db.dart';
 import '../source/remote/todo_api.dart';
@@ -69,13 +70,19 @@ class TodoLocalRepository implements TodoRepository<LocalDBError> {
   TodoLocalRepository([TodoDB? db]) : _db = db ?? Get.find();
 
   @override
-  Future<SimpleResult<List<Todo>, LocalDBError>> getTodoList() => _db.getTodoList();
+  Future<SimpleResult<List<Todo>, LocalDBError>> getTodoList() async {
+    final result = await _db.getTodoList();
+    if (result.isSuccess) {
+      return SimpleResult.success(result.successData.map((e) => e.toModel()).toList());
+    } else {
+      return SimpleResult.failure(result.failureData);
+    }
+  }
 
   @override
-  Future<SimpleResult<void, LocalDBError>> addTodo(Todo todo) => _db.addTodo(todo);
-
+  Future<SimpleResult<void, LocalDBError>> addTodo(Todo todo) => _db.addTodo(todo.toDbModel());
   @override
-  Future<SimpleResult<void, LocalDBError>> updateTodo(Todo todo) => _db.updateTodo(todo);
+  Future<SimpleResult<void, LocalDBError>> updateTodo(Todo todo) => _db.updateTodo(todo.toDbModel());
 
   @override
   Future<SimpleResult<void, LocalDBError>> removeTodo(Id id) => _db.removeTodo(id);

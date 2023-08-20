@@ -8,9 +8,6 @@ import 'package:fast_app_base/presentation/screen/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../../../../data/source/local/local_db.dart';
-import '../../../../../data/source/todo_repository.dart';
-
 class TodoData extends GetxController {
   final RxList<Todo> todoList = <Todo>[].obs;
 

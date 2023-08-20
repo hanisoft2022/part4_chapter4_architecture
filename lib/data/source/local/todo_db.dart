@@ -14,25 +14,25 @@ class TodoDB {
     _isar = await Isar.open([TodoDbModelSchema], maxSizeMiB: 512, directory: dir.path);
   }
 
-  Future<SimpleResult<List<Todo>, LocalDBError>> getTodoList() async {
+  Future<SimpleResult<List<TodoDbModel>, LocalDBError>> getTodoList() async {
     try {
       final documents = await _isar.todoDbModels.filter().idGreaterThan(0).findAll();
-      return SimpleResult.success(documents.map((e) => e.createTodo()).toList());
+      return SimpleResult.success(documents);
     } catch (e) {
       return SimpleResult.failure(LocalDBError(LocalDBErrorType.unknown, '에러가 발생했습니다. catch를 통해 세분화된 에러를 넘겨주세요.'));
     }
   }
 
-  Future<SimpleResult<void, LocalDBError>> addTodo(Todo todo) async {
+  Future<SimpleResult<void, LocalDBError>> addTodo(TodoDbModel todo) async {
     await _isar.writeTxn(() async {
-      await _isar.todoDbModels.put(todo.dbModel);
+      await _isar.todoDbModels.put(todo);
     });
     return SimpleResult.success();
   }
 
-  Future<SimpleResult<void, LocalDBError>> updateTodo(Todo todo) async {
+  Future<SimpleResult<void, LocalDBError>> updateTodo(TodoDbModel todo) async {
     await _isar.writeTxn(() async {
-      await _isar.todoDbModels.put(todo.dbModel);
+      await _isar.todoDbModels.put(todo);
     });
     return SimpleResult.success();
   }
