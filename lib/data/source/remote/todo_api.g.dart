@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'todo_client.dart';
+part of 'todo_api.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'todo_client.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _TodoClient implements TodoClient {
-  _TodoClient(
+class _TodoApi implements TodoApi {
+  _TodoApi(
     this._dio, {
     this.baseUrl,
   });
@@ -24,26 +24,23 @@ class _TodoClient implements TodoClient {
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
-    final _result =
-        await _dio.fetch<List<dynamic>>(_setStreamType<List<Todo>>(Options(
+    final _result = await _dio.fetch<List<dynamic>>(_setStreamType<List<Todo>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
-            .compose(
-              _dio.options,
-              '/todo',
-              queryParameters: queryParameters,
-              data: _data,
-            )
-            .copyWith(
-                baseUrl: _combineBaseUrls(
-              _dio.options.baseUrl,
-              baseUrl,
-            ))));
-    var value = _result.data!
-        .map((dynamic i) => Todo.fromJson(i as Map<String, dynamic>))
-        .toList();
+        .compose(
+          _dio.options,
+          '/todo',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        ))));
+    var value = _result.data!.map((dynamic i) => Todo.fromJson(i as Map<String, dynamic>)).toList();
     return value;
   }
 
@@ -125,8 +122,7 @@ class _TodoClient implements TodoClient {
 
   RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
     if (T != dynamic &&
-        !(requestOptions.responseType == ResponseType.bytes ||
-            requestOptions.responseType == ResponseType.stream)) {
+        !(requestOptions.responseType == ResponseType.bytes || requestOptions.responseType == ResponseType.stream)) {
       if (T == String) {
         requestOptions.responseType = ResponseType.plain;
       } else {
