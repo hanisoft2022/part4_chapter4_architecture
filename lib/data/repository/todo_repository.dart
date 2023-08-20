@@ -1,6 +1,6 @@
 import 'package:fast_app_base/data/simple_result.dart';
 
-import 'memory/vo_todo.dart';
+import '../memory/vo_todo.dart';
 
 abstract interface class TodoRepository<Error> {
   Future<SimpleResult<List<Todo>, Error>> getTodoList();

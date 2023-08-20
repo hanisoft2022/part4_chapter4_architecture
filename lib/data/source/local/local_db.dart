@@ -1,11 +1,11 @@
 import 'package:fast_app_base/data/local/collection/todo_db_model.dart';
-import 'package:fast_app_base/data/todo_repository.dart';
+import 'package:fast_app_base/data/repository/todo_repository.dart';
 import 'package:flutter/foundation.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
 import '../../data/local/error/local_db_error.dart';
-import '../memory/vo_todo.dart';
+import '../../entity/vo_todo.dart';
 import '../simple_result.dart';
 
 class LocalDB implements TodoRepository<LocalDBError> {
@@ -28,8 +28,7 @@ class LocalDB implements TodoRepository<LocalDBError> {
       return SimpleResult.success(documents.map((e) => e.createTodo()).toList());
     } catch (e) {
       debugPrint('get response fail');
-      return SimpleResult.failure(
-          LocalDBError(LocalDBErrorType.unknown, '에러가 발생했습니다. catch를 통해 세분화된 에러를 넘겨주세요.'));
+      return SimpleResult.failure(LocalDBError(LocalDBErrorType.unknown, '에러가 발생했습니다. catch를 통해 세분화된 에러를 넘겨주세요.'));
     }
   }
 

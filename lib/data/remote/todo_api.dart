@@ -5,7 +5,7 @@ import 'package:fast_app_base/data/remote/todo_client.dart';
 
 import '../memory/vo_todo.dart';
 import '../simple_result.dart';
-import '../todo_repository.dart';
+import '../repository/todo_repository.dart';
 
 ///Remote DB
 class TodoApi implements TodoRepository<ApiError> {
@@ -47,8 +47,7 @@ class TodoApi implements TodoRepository<ApiError> {
     });
   }
 
-  Future<SimpleResult<T, ApiError>> tryRequest<T>(
-      Future<SimpleResult<T, ApiError>> Function() apiLogic) async {
+  Future<SimpleResult<T, ApiError>> tryRequest<T>(Future<SimpleResult<T, ApiError>> Function() apiLogic) async {
     try {
       return await apiLogic();
     } on DioException catch (e) {

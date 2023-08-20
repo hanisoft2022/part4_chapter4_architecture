@@ -1,6 +1,7 @@
-import 'package:fast_app_base/data/local/collection/todo_db_model.dart';
-import 'package:fast_app_base/data/memory/todo_status.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import 'todo_db_model.dart';
+import 'todo_status.dart';
 
 part 'vo_todo.freezed.dart';
 part 'vo_todo.g.dart';
