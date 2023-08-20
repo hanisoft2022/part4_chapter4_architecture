@@ -6,7 +6,7 @@ import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:get/get_utils/src/extensions/string_extensions.dart';
 import 'package:simple_shadow/simple_shadow.dart';
 
-import '../../../screen/dialog/d_message.dart';
+import '../../../presentation/screen/dialog/d_message.dart';
 import '../../common/common.dart';
 import '../../common/language/language.dart';
 import '../../common/theme/theme_util.dart';
@@ -44,8 +44,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
               width: 240,
               padding: const EdgeInsets.only(top: 10),
               decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(5), bottomRight: Radius.circular(5)),
+                  borderRadius: const BorderRadius.only(topRight: Radius.circular(5), bottomRight: Radius.circular(5)),
                   color: context.colors.background),
               child: isSmallScreen(context)
                   ? SingleChildScrollView(
@@ -59,8 +58,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
     );
   }
 
-  bool isSmallScreen(BuildContext context) =>
-      context.deviceHeight < MenuDrawer.minHeightForScrollView;
+  bool isSmallScreen(BuildContext context) => context.deviceHeight < MenuDrawer.minHeightForScrollView;
 
   Container getMenus(BuildContext context) {
     return Container(
@@ -132,10 +130,7 @@ class _MenuDrawerState extends State<MenuDrawer> {
                       height: 30,
                       width: 100,
                       padding: const EdgeInsets.only(left: 15),
-                      child: '© 2023. Bansook Nam. all rights reserved.'
-                          .selectableText
-                          .size(10)
-                          .makeWithDefaultFont()),
+                      child: '© 2023. Bansook Nam. all rights reserved.'.selectableText.size(10).makeWithDefaultFont()),
                   onTap: () async {},
                 ),
               ),
@@ -247,11 +242,7 @@ class _MenuWidget extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                  child: text.text
-                      .textStyle(defaultFontStyle())
-                      .color(context.appColors.drawerText)
-                      .size(15)
-                      .make()),
+                  child: text.text.textStyle(defaultFontStyle()).color(context.appColors.drawerText).size(15).make()),
             ],
           ),
         ),
