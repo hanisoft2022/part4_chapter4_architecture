@@ -1,7 +1,7 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/custom_theme_app.dart';
 import 'package:fast_app_base/presentation/screen/main/s_main.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/todo/bindings.dart';
+// import 'package:fast_app_base/presentation/screen/main/tab/todo/bindings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -44,7 +44,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
           title: 'Image Finder',
           theme: context.themeType.themeData,
           home: const MainScreen(),
-          initialBinding: TodoBindings(),
+          // initialBinding: TodoBindings(),
         );
       }),
     );
