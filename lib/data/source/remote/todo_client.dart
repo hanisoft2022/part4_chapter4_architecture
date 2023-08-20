@@ -4,9 +4,9 @@ import 'package:dio/dio.dart' hide Headers;
 
 ///retrofit Headers를 사용하기 위해 dio의 Headers를 숨김
 ///retrofit Headers를 사용하기 위해 dio의 Headers를 숨김
-import 'package:fast_app_base/data/memory/vo_todo.dart';
 import 'package:retrofit/retrofit.dart';
 
+import '../../entity/vo_todo.dart';
 import 'dio/dio_json_response_converter.dart';
 
 part 'todo_client.g.dart';
@@ -15,8 +15,7 @@ part 'todo_client.g.dart';
 abstract class TodoClient {
   factory TodoClient(Dio dio, {String? baseUrl}) {
     dio.interceptors.add(DioJsonResponseConverter());
-    return _TodoClient(dio,
-        baseUrl: Platform.isAndroid ? 'http://10.0.2.2:8080/' : 'http://localhost:8080/');
+    return _TodoClient(dio, baseUrl: Platform.isAndroid ? 'http://10.0.2.2:8080/' : 'http://localhost:8080/');
   }
 
   @GET('/todo')
