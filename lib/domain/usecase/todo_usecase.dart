@@ -16,13 +16,13 @@ class AddTodoUseCase implements UseCase<void, Todo> {
   }
 }
 
-class ReadTodosUseCase implements UseCase<void, List<Todo>> {
+class ReadTodosUseCase implements UseCase<List<Todo>, void> {
   final TodoRepository _repository;
 
   ReadTodosUseCase([TodoRepository? repository]) : _repository = repository ?? Get.find();
 
   @override
-  Future<List<Todo>> execute(void _) async {
+  Future<List<Todo>> execute([void params]) async {
     final result = await _repository.getTodoList();
     return result.successData;
   }
