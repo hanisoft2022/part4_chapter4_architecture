@@ -8,14 +8,15 @@ import 'package:fast_app_base/screen/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../remote/todo_api.dart';
+import '../local/local_db.dart';
+import '../todo_repository.dart';
 
 class TodoData extends GetxController {
   final RxList<Todo> todoList = <Todo>[].obs;
 
-  final todoRepository = TodoApi.instance;
+  // final todoRepository = TodoApi.instance;
 
-  //final TodoRepository todoRepository = LocalDB.instance;
+  final TodoRepository todoRepository = LocalDB.instance;
 
   @override
   void onInit() async {
