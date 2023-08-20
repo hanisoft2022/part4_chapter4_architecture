@@ -7,10 +7,10 @@ import 'package:fast_app_base/presentation/screen/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TodoData extends GetxController {
+class TodoController extends GetxController {
   final RxList<Todo> todoList = <Todo>[].obs;
 
-  TodoData([TodoRepository? todoRepository]) : _repository = todoRepository ?? Get.find();
+  TodoController([TodoRepository? todoRepository]) : _repository = todoRepository ?? Get.find();
 
   final TodoRepository _repository;
 
@@ -84,8 +84,4 @@ class TodoData extends GetxController {
     _repository.removeTodo(todo.id);
     //LocalDB.removeTodo(todo.id);
   }
-}
-
-mixin class TodoDataProvider {
-  late final TodoData todoData = Get.find();
 }
