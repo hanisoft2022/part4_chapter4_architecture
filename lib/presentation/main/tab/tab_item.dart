@@ -1,6 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/search/f_search.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/todo/f_todo.dart';
+import 'package:fast_app_base/presentation/main/tab/search/f_search.dart';
+import 'package:fast_app_base/presentation/main/tab/todo/f_todo.dart';
 import 'package:flutter/material.dart';
 
 enum TabItem {
@@ -20,8 +20,7 @@ enum TabItem {
         icon: Icon(
           key: ValueKey(tabName),
           isActivated ? activeIcon : inActiveIcon,
-          color:
-              isActivated ? context.appColors.iconButton : context.appColors.iconButtonInactivate,
+          color: isActivated ? context.appColors.iconButton : context.appColors.iconButtonInactivate,
         ),
         label: tabName);
   }

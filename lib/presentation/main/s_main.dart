@@ -1,8 +1,8 @@
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:fast_app_base/common/di/di.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/controller/todo_controller.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/tab_item.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/tab_navigator.dart';
+import 'package:fast_app_base/presentation/main/tab/controller/todo_controller.dart';
+import 'package:fast_app_base/presentation/main/tab/tab_item.dart';
+import 'package:fast_app_base/presentation/main/tab/tab_navigator.dart';
 import 'package:flutter/material.dart';
 
 import '../../../common/common.dart';

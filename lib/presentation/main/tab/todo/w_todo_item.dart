@@ -3,8 +3,8 @@ import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/dart/extension/datetime_extension.dart';
 import 'package:fast_app_base/common/di/di.dart';
 import 'package:fast_app_base/domain/domain.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/controller/todo_controller.dart';
-import 'package:fast_app_base/presentation/screen/main/tab/todo/w_todo_status.dart';
+import 'package:fast_app_base/presentation/main/tab/controller/todo_controller.dart';
+import 'package:fast_app_base/presentation/main/tab/todo/w_todo_status.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

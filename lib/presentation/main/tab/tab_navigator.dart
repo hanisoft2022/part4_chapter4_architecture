@@ -1,4 +1,4 @@
-import 'package:fast_app_base/presentation/screen/main/tab/tab_item.dart';
+import 'package:fast_app_base/presentation/main/tab/tab_item.dart';
 import 'package:flutter/material.dart';
 
 class TabNavigator extends StatelessWidget {

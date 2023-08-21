@@ -1,6 +1,6 @@
 import 'package:fast_app_base/domain/domain.dart';
-import 'package:fast_app_base/presentation/screen/dialog/d_confirm.dart';
-import 'package:fast_app_base/presentation/screen/main/write/d_write_todo.dart';
+import 'package:fast_app_base/presentation/dialog/d_confirm.dart';
+import 'package:fast_app_base/presentation/main/write/d_write_todo.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:injectable/injectable.dart';
