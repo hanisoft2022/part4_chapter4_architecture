@@ -1,6 +1,5 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
-
-import '../common.dart';
 
 class TextBadgeTheme {
   factory TextBadgeTheme.basic(BuildContext context) {

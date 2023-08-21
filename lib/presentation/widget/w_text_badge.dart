@@ -1,6 +1,6 @@
+import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
 
-import '../common.dart';
 import 'theme_text_badge.dart';
 
 export 'theme_text_badge.dart';
@@ -46,9 +46,7 @@ class TextBadge extends StatelessWidget {
         borderRadius = theme.borderRadius,
         verticalPadding = theme.verticalPadding,
         horizontalPadding = theme.horizontalPadding,
-        boder = theme.borderWidth == null
-            ? null
-            : Border.all(width: theme.borderWidth!, color: theme.borderColor);
+        boder = theme.borderWidth == null ? null : Border.all(width: theme.borderWidth!, color: theme.borderColor);
 
   @override
   Widget build(BuildContext context) {
@@ -63,20 +61,12 @@ class TextBadge extends StatelessWidget {
   Container badge() {
     return Container(
         padding: EdgeInsets.symmetric(vertical: verticalPadding, horizontal: horizontalPadding),
-        decoration: BoxDecoration(
-            color: backgroundColor,
-            borderRadius: BorderRadius.circular(borderRadius),
-            border: boder),
+        decoration:
+            BoxDecoration(color: backgroundColor, borderRadius: BorderRadius.circular(borderRadius), border: boder),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            text.text
-                .maxLines(1)
-                .size(fontSize)
-                .minFontSize(4)
-                .medium
-                .color(textColor)
-                .makeWithDefaultFont(),
+            text.text.maxLines(1).size(fontSize).minFontSize(4).medium.color(textColor).makeWithDefaultFont(),
             if (rightWidget != null) rightWidget!
           ],
         ));

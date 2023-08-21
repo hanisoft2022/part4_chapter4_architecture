@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:fast_app_base/common/common.dart';
 
-import '../common.dart';
+import 'package:flutter/material.dart';
 
 class Line extends StatelessWidget {
   const Line({

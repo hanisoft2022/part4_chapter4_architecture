@@ -5,10 +5,9 @@ import 'package:fast_app_base/common/di/di.dart';
 import 'package:fast_app_base/domain/domain.dart';
 import 'package:fast_app_base/presentation/main/tab/controller/todo_controller.dart';
 import 'package:fast_app_base/presentation/main/tab/todo/w_todo_status.dart';
+import 'package:fast_app_base/presentation/widget/w_rounded_container.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../../../common/widget/w_rounded_container.dart';
 
 class TodoItem extends GetView<TodoController> {
   final Todo todo;
