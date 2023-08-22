@@ -4,7 +4,7 @@ import 'package:fast_app_base/common/dart/extension/datetime_extension.dart';
 import 'package:fast_app_base/common/util/app_keyboard_util.dart';
 import 'package:fast_app_base/presentation/widget/bottom_dialog_scaffold.dart';
 import 'package:fast_app_base/presentation/widget/w_round_button.dart';
-import 'package:fast_app_base/data/simple_result.dart';
+import 'package:fast_app_base/common/util/simple_result.dart';
 import 'package:fast_app_base/domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:nav/dialog/dialog.dart';
