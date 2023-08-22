@@ -4,6 +4,10 @@
 
 Chapter 4. 아키텍처
 - 챕터 3에서 배운 아키텍처 개념을 실제로 적용해보는 챕터입니다.
+- To do 앱 GetX Isar, dio 버전
+
+https://github.com/fastcampus-flutter/part3_chapter5_todo_state_management
+*branch : storage_repo/getX_isar_dio*
 
 ### 주의
 
@@ -40,3 +44,9 @@ Chapter 4. 아키텍처
    - repository
    - use case
 5. DI
+
+### +@
+
+- entity(dto, db model) / model 통합
+- use case 사용 안하고 repository만 활용
+- Layer 단위로 패키지 모듈화
