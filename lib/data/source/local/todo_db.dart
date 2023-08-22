@@ -6,6 +6,7 @@ import '../../entity/entity.dart';
 import '../../../common/util/simple_result.dart';
 import 'error/local_db_error.dart';
 
+/// TodoDAO
 class TodoDB {
   static late final Isar _isar;
 
