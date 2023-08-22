@@ -7,7 +7,8 @@ Chapter 4. 아키텍처
 - To do 앱 GetX Isar, dio 버전
 
 https://github.com/fastcampus-flutter/part3_chapter5_todo_state_management
-*branch : storage_repo/getX_isar_dio*
+
+**branch : storage_repo/getX_isar_dio**
 
 ### 주의
 
