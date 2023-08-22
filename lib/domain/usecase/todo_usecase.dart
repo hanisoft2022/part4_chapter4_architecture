@@ -16,7 +16,7 @@ class TodoUseCase {
 class AddTodoUseCase implements UseCase<void, Todo> {
   // final TodoRepository<LocalDBError> _repository = locator();
   final TodoRepository<LocalDBError> _repository;
-
+  // final TodoLocalRepository
   AddTodoUseCase([TodoRepository<LocalDBError>? repository]) : _repository = repository ?? locator();
 
   @override

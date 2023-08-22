@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/util/simple_result.dart';
 import 'package:fast_app_base/domain/domain.dart';
 import 'package:fast_app_base/presentation/dialog/d_confirm.dart';
 import 'package:fast_app_base/presentation/main/write/d_write_todo.dart';
@@ -23,8 +24,7 @@ class TodoController extends GetxController {
     return DateTime.now().millisecondsSinceEpoch;
   }
 
-  void addTodo(BuildContext context) async {
-    final result = await WriteTodoBottomSheet().show();
+  void addTodo(SimpleResult<TodoWriteResult, void>? result) async {
     result?.runIfSuccess((data) {
       final newTodo = Todo(
         id: newId,

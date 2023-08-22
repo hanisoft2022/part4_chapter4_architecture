@@ -3,6 +3,8 @@ import 'package:fast_app_base/domain/domain.dart';
 import 'package:fast_app_base/presentation/main/tab/controller/todo_controller.dart';
 import 'package:get/get.dart';
 
+/// get_it
+/// GetX
 class TodoBindings implements Bindings {
   @override
   void dependencies() {
@@ -13,7 +15,13 @@ class TodoBindings implements Bindings {
 
     /// local
     Get.put<TodoDB>(TodoDB());
+
+
+    ///
     Get.put<TodoRepository>(TodoLocalRepository());
+
+
+    /// 
     Get.put<TodoController>(TodoController());
   }
 }

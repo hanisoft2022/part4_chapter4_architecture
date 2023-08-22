@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../../common/common.dart';
 import 'w_menu_drawer.dart';
+import 'write/d_write_todo.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
@@ -59,8 +60,9 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
         floatingActionButton: _currentIndex == 0
             ? FloatingActionButton(
                 onPressed: () async {
+                  final result = await WriteTodoBottomSheet().show();
                   // Get.find<TodoController>().addTodo(context);
-                  _controller.addTodo(context);
+                  _controller.addTodo(result);
                 },
                 child: const Icon(EvaIcons.plus),
               )
