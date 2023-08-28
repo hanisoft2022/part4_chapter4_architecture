@@ -51,3 +51,4 @@ https://github.com/fastcampus-flutter/part3_chapter5_todo_state_management
 - entity(dto, db model) / model 통합
 - use case 사용 안하고 repository만 활용
 - Layer 단위로 패키지 모듈화
+   - https://github.com/invertase/melos 활용 추천 
