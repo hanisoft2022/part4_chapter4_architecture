@@ -1,8 +1,8 @@
-import 'package:fast_app_base/data/entity/todo_db_model.dart';
+import 'package:fast_app_base/data/model/todo_db_model.dart';
 import 'package:isar/isar.dart';
 import 'package:path_provider/path_provider.dart';
 
-import '../../entity/entity.dart';
+import '../../model/model.dart';
 import '../../../common/util/simple_result.dart';
 import 'error/local_db_error.dart';
 

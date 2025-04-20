@@ -6,7 +6,7 @@ import 'package:dio/dio.dart' hide Headers;
 ///retrofit Headers를 사용하기 위해 dio의 Headers를 숨김
 import 'package:retrofit/retrofit.dart';
 
-import '../../entity/todo_dto.dart';
+import '../../model/todo_dto.dart';
 import 'dio/dio_json_response_converter.dart';
 
 part 'todo_api.g.dart';

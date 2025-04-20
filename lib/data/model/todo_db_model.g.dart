@@ -133,8 +133,7 @@ TodoDbModel _todoDbModelDeserialize(
     reader.readDateTimeOrNull(offsets[2]),
     reader.readString(offsets[4]),
     reader.readDateTime(offsets[1]),
-    _TodoDbModelstatusValueEnumMap[reader.readByteOrNull(offsets[3])] ??
-        TodoStatus.incomplete,
+    _TodoDbModelstatusValueEnumMap[reader.readByteOrNull(offsets[3])] ?? TodoStatus.incomplete,
   );
   return object;
 }
@@ -153,8 +152,7 @@ P _todoDbModelDeserializeProp<P>(
     case 2:
       return (reader.readDateTimeOrNull(offset)) as P;
     case 3:
-      return (_TodoDbModelstatusValueEnumMap[reader.readByteOrNull(offset)] ??
-          TodoStatus.incomplete) as P;
+      return (_TodoDbModelstatusValueEnumMap[reader.readByteOrNull(offset)] ?? TodoStatus.incomplete) as P;
     case 4:
       return (reader.readString(offset)) as P;
     default:
@@ -183,13 +181,11 @@ List<IsarLinkBase<dynamic>> _todoDbModelGetLinks(TodoDbModel object) {
   return [];
 }
 
-void _todoDbModelAttach(
-    IsarCollection<dynamic> col, Id id, TodoDbModel object) {
+void _todoDbModelAttach(IsarCollection<dynamic> col, Id id, TodoDbModel object) {
   object.id = id;
 }
 
-extension TodoDbModelQueryWhereSort
-    on QueryBuilder<TodoDbModel, TodoDbModel, QWhere> {
+extension TodoDbModelQueryWhereSort on QueryBuilder<TodoDbModel, TodoDbModel, QWhere> {
   QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhere> anyId() {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(const IdWhereClause.any());
@@ -221,8 +217,7 @@ extension TodoDbModelQueryWhereSort
   }
 }
 
-extension TodoDbModelQueryWhere
-    on QueryBuilder<TodoDbModel, TodoDbModel, QWhereClause> {
+extension TodoDbModelQueryWhere on QueryBuilder<TodoDbModel, TodoDbModel, QWhereClause> {
   QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idEqualTo(Id id) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IdWhereClause.between(
@@ -232,8 +227,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idNotEqualTo(
-      Id id) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idNotEqualTo(Id id) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -255,8 +249,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idGreaterThan(Id id,
-      {bool include = false}) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idGreaterThan(Id id, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IdWhereClause.greaterThan(lower: id, includeLower: include),
@@ -264,8 +257,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idLessThan(Id id,
-      {bool include = false}) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> idLessThan(Id id, {bool include = false}) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(
         IdWhereClause.lessThan(upper: id, includeUpper: include),
@@ -289,8 +281,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> createdTimeEqualTo(
-      DateTime createdTime) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> createdTimeEqualTo(DateTime createdTime) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IndexWhereClause.equalTo(
         indexName: r'createdTime',
@@ -299,8 +290,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause>
-      createdTimeNotEqualTo(DateTime createdTime) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> createdTimeNotEqualTo(DateTime createdTime) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -334,8 +324,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause>
-      createdTimeGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> createdTimeGreaterThan(
     DateTime createdTime, {
     bool include = false,
   }) {
@@ -389,8 +378,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause>
-      modifyTimeIsNotNull() {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> modifyTimeIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IndexWhereClause.between(
         indexName: r'modifyTime',
@@ -401,8 +389,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> modifyTimeEqualTo(
-      DateTime? modifyTime) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> modifyTimeEqualTo(DateTime? modifyTime) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IndexWhereClause.equalTo(
         indexName: r'modifyTime',
@@ -411,8 +398,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause>
-      modifyTimeNotEqualTo(DateTime? modifyTime) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> modifyTimeNotEqualTo(DateTime? modifyTime) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -446,8 +432,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause>
-      modifyTimeGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> modifyTimeGreaterThan(
     DateTime? modifyTime, {
     bool include = false,
   }) {
@@ -492,8 +477,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleEqualTo(
-      String title) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleEqualTo(String title) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IndexWhereClause.equalTo(
         indexName: r'title',
@@ -502,8 +486,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleNotEqualTo(
-      String title) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleNotEqualTo(String title) {
     return QueryBuilder.apply(this, (query) {
       if (query.whereSort == Sort.asc) {
         return query
@@ -582,8 +565,7 @@ extension TodoDbModelQueryWhere
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleStartsWith(
-      String TitlePrefix) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterWhereClause> titleStartsWith(String TitlePrefix) {
     return QueryBuilder.apply(this, (query) {
       return query.addWhereClause(IndexWhereClause.between(
         indexName: r'title',
@@ -629,10 +611,8 @@ extension TodoDbModelQueryWhere
   }
 }
 
-extension TodoDbModelQueryFilter
-    on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      createdTimeEqualTo(DateTime value) {
+extension TodoDbModelQueryFilter on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> createdTimeEqualTo(DateTime value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'createdTime',
@@ -641,8 +621,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      createdTimeGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> createdTimeGreaterThan(
     DateTime value, {
     bool include = false,
   }) {
@@ -655,8 +634,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      createdTimeLessThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> createdTimeLessThan(
     DateTime value, {
     bool include = false,
   }) {
@@ -669,8 +647,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      createdTimeBetween(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> createdTimeBetween(
     DateTime lower,
     DateTime upper, {
     bool includeLower = true,
@@ -687,8 +664,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> dueDateEqualTo(
-      DateTime value) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> dueDateEqualTo(DateTime value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'dueDate',
@@ -697,8 +673,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      dueDateGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> dueDateGreaterThan(
     DateTime value, {
     bool include = false,
   }) {
@@ -741,8 +716,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> idEqualTo(
-      Id value) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> idEqualTo(Id value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'id',
@@ -794,8 +768,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeIsNull() {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeIsNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNull(
         property: r'modifyTime',
@@ -803,8 +776,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeIsNotNull() {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeIsNotNull() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(const FilterCondition.isNotNull(
         property: r'modifyTime',
@@ -812,8 +784,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeEqualTo(DateTime? value) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeEqualTo(DateTime? value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'modifyTime',
@@ -822,8 +793,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeGreaterThan(
     DateTime? value, {
     bool include = false,
   }) {
@@ -836,8 +806,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeLessThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeLessThan(
     DateTime? value, {
     bool include = false,
   }) {
@@ -850,8 +819,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      modifyTimeBetween(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> modifyTimeBetween(
     DateTime? lower,
     DateTime? upper, {
     bool includeLower = true,
@@ -868,8 +836,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> statusEqualTo(
-      TodoStatus value) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> statusEqualTo(TodoStatus value) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.equalTo(
         property: r'status',
@@ -878,8 +845,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      statusGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> statusGreaterThan(
     TodoStatus value, {
     bool include = false,
   }) {
@@ -935,8 +901,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      titleGreaterThan(
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleGreaterThan(
     String value, {
     bool include = false,
     bool caseSensitive = true,
@@ -1011,9 +976,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleContains(
-      String value,
-      {bool caseSensitive = true}) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleContains(String value, {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.contains(
         property: r'title',
@@ -1023,9 +986,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleMatches(
-      String pattern,
-      {bool caseSensitive = true}) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleMatches(String pattern, {bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.matches(
         property: r'title',
@@ -1044,8 +1005,7 @@ extension TodoDbModelQueryFilter
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition>
-      titleIsNotEmpty() {
+  QueryBuilder<TodoDbModel, TodoDbModel, QAfterFilterCondition> titleIsNotEmpty() {
     return QueryBuilder.apply(this, (query) {
       return query.addFilterCondition(FilterCondition.greaterThan(
         property: r'title',
@@ -1055,14 +1015,11 @@ extension TodoDbModelQueryFilter
   }
 }
 
-extension TodoDbModelQueryObject
-    on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {}
+extension TodoDbModelQueryObject on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {}
 
-extension TodoDbModelQueryLinks
-    on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {}
+extension TodoDbModelQueryLinks on QueryBuilder<TodoDbModel, TodoDbModel, QFilterCondition> {}
 
-extension TodoDbModelQuerySortBy
-    on QueryBuilder<TodoDbModel, TodoDbModel, QSortBy> {
+extension TodoDbModelQuerySortBy on QueryBuilder<TodoDbModel, TodoDbModel, QSortBy> {
   QueryBuilder<TodoDbModel, TodoDbModel, QAfterSortBy> sortByCreatedTime() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdTime', Sort.asc);
@@ -1124,8 +1081,7 @@ extension TodoDbModelQuerySortBy
   }
 }
 
-extension TodoDbModelQuerySortThenBy
-    on QueryBuilder<TodoDbModel, TodoDbModel, QSortThenBy> {
+extension TodoDbModelQuerySortThenBy on QueryBuilder<TodoDbModel, TodoDbModel, QSortThenBy> {
   QueryBuilder<TodoDbModel, TodoDbModel, QAfterSortBy> thenByCreatedTime() {
     return QueryBuilder.apply(this, (query) {
       return query.addSortBy(r'createdTime', Sort.asc);
@@ -1199,8 +1155,7 @@ extension TodoDbModelQuerySortThenBy
   }
 }
 
-extension TodoDbModelQueryWhereDistinct
-    on QueryBuilder<TodoDbModel, TodoDbModel, QDistinct> {
+extension TodoDbModelQueryWhereDistinct on QueryBuilder<TodoDbModel, TodoDbModel, QDistinct> {
   QueryBuilder<TodoDbModel, TodoDbModel, QDistinct> distinctByCreatedTime() {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'createdTime');
@@ -1225,16 +1180,14 @@ extension TodoDbModelQueryWhereDistinct
     });
   }
 
-  QueryBuilder<TodoDbModel, TodoDbModel, QDistinct> distinctByTitle(
-      {bool caseSensitive = true}) {
+  QueryBuilder<TodoDbModel, TodoDbModel, QDistinct> distinctByTitle({bool caseSensitive = true}) {
     return QueryBuilder.apply(this, (query) {
       return query.addDistinctBy(r'title', caseSensitive: caseSensitive);
     });
   }
 }
 
-extension TodoDbModelQueryProperty
-    on QueryBuilder<TodoDbModel, TodoDbModel, QQueryProperty> {
+extension TodoDbModelQueryProperty on QueryBuilder<TodoDbModel, TodoDbModel, QQueryProperty> {
   QueryBuilder<TodoDbModel, int, QQueryOperations> idProperty() {
     return QueryBuilder.apply(this, (query) {
       return query.addPropertyName(r'id');

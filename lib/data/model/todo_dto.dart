@@ -1,9 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../data/entity/todo_status.dart';
+import 'todo_status.dart';
 
 part 'todo_dto.freezed.dart';
 part 'todo_dto.g.dart';
+
 /// Text('')
 @unfreezed
 class TodoDTO with _$TodoDTO {

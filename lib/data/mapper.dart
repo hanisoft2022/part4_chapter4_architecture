@@ -1,6 +1,6 @@
 import 'package:fast_app_base/domain/domain.dart' as domain;
 
-import 'entity/entity.dart';
+import 'model/model.dart';
 
 /// ENTITY -> MODEL
 extension TodoStatusEx on TodoStatus {
