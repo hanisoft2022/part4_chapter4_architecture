@@ -11,27 +11,13 @@ extension TodoStatusEx on TodoStatus {
 
 extension TodoDbModelEx on TodoDbModel {
   domain.Todo toModel() {
-    return domain.Todo(
-      id: id,
-      title: title,
-      dueDate: dueDate,
-      createdTime: createdTime,
-      status: status.toModel(),
-      modifyTime: modifyTime,
-    );
+    return domain.Todo(id: id, title: title, dueDate: dueDate, createdTime: createdTime, status: status.toModel(), modifyTime: modifyTime);
   }
 }
 
 extension TodoDTOEx on TodoDTO {
   domain.Todo toModel() {
-    return domain.Todo(
-      id: id,
-      title: title,
-      dueDate: dueDate,
-      createdTime: createdTime,
-      status: status.toModel(),
-      modifyTime: modifyTime,
-    );
+    return domain.Todo(id: id, title: title, dueDate: dueDate, createdTime: createdTime, status: status.toModel(), modifyTime: modifyTime);
   }
 }
 
@@ -44,24 +30,10 @@ extension DomainTodoStatusEx on domain.TodoStatus {
 
 extension TodoEx on domain.Todo {
   TodoDbModel toDbModel() {
-    return TodoDbModel(
-      id,
-      createdTime,
-      modifyTime,
-      title,
-      dueDate,
-      status.toEntity(),
-    );
+    return TodoDbModel(id, createdTime, modifyTime, title, dueDate, status.toEntity());
   }
 
   TodoDTO toDTO() {
-    return TodoDTO(
-      id: id,
-      createdTime: createdTime,
-      modifyTime: modifyTime,
-      title: title,
-      dueDate: dueDate,
-      status: status.toEntity(),
-    );
+    return TodoDTO(id: id, createdTime: createdTime, modifyTime: modifyTime, title: title, dueDate: dueDate, status: status.toEntity());
   }
 }
