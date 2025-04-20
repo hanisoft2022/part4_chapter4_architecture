@@ -31,10 +31,10 @@ extension GetItInjectableX on _i1.GetIt {
       environmentFilter,
     );
     final dataSourceModule = _$DataSourceModule();
-    gh.singleton<_i3.TodoApi>(dataSourceModule.todoApi);
-    gh.singleton<_i4.TodoController>(_i4.TodoController());
-    gh.singleton<_i3.TodoDB>(dataSourceModule.todoDB);
-    gh.singleton<_i5.TodoRepository<_i6.LocalDBError>>(_i7.TodoLocalRepository(gh<_i8.TodoDB>()));
+    gh.singleton<_i3.TodoApi>(() => dataSourceModule.todoApi);
+    gh.singleton<_i4.TodoController>(() => _i4.TodoController());
+    gh.singleton<_i3.TodoDB>(() => dataSourceModule.todoDB);
+    gh.singleton<_i5.TodoRepository<_i6.LocalDBError>>(() => _i7.TodoLocalRepository(gh<_i8.TodoDB>()));
     return this;
   }
 }

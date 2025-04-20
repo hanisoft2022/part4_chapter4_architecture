@@ -1,10 +1,7 @@
 PODS:
   - Flutter (1.0.0)
-  - flutter_native_splash (0.0.1):
+  - flutter_native_splash (2.4.3):
     - Flutter
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
   - isar_flutter_libs (1.0.0):
     - Flutter
   - keyboard_utils_fork (0.0.1):
@@ -17,9 +14,9 @@ PODS:
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
-  - sqflite (0.0.3):
+  - sqflite_darwin (0.0.4):
     - Flutter
-    - FMDB (>= 2.7.5)
+    - FlutterMacOS
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
@@ -29,11 +26,7 @@ DEPENDENCIES:
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - rive_common (from `.symlinks/plugins/rive_common/ios`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
-  - sqflite (from `.symlinks/plugins/sqflite/ios`)
-
-SPEC REPOS:
-  trunk:
-    - FMDB
+  - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
 
 EXTERNAL SOURCES:
   Flutter:
@@ -50,19 +43,18 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/rive_common/ios"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
-  sqflite:
-    :path: ".symlinks/plugins/sqflite/ios"
+  sqflite_darwin:
+    :path: ".symlinks/plugins/sqflite_darwin/darwin"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_native_splash: 9e672d3818957718ee006a491730c09deeecace9
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  flutter_native_splash: c32d145d68aeda5502d5f543ee38c192065986cf
   isar_flutter_libs: 9fc2cfb928c539e1b76c481ba5d143d556d94920
   keyboard_utils_fork: 7c7a5c1563c76d9f5d0ed8758a932683f42304af
-  path_provider_foundation: 0f28622a447f952060798e710afcae6800d1dfa0
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
   rive_common: 174a033b260147a98ca082e0c76a6eacc800c4cc
-  shared_preferences_foundation: 84ce365ee5ce19a94de8ece53db7142d35141a5b
-  sqflite: 5b24d06a453c198c13b305ceea4b4286cc07cfe4
+  shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
+  sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
 
 PODFILE CHECKSUM: c4c93c5f6502fe2754f48404d3594bf779584011
 
