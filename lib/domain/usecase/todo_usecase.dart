@@ -3,7 +3,7 @@ import 'package:fast_app_base/common/di/di.dart';
 import 'package:fast_app_base/data/source/local/error/local_db_error.dart';
 import 'package:fast_app_base/domain/usecase/base.dart';
 
-import '../entity/model.dart';
+import '../entity/entity.dart';
 import '../repository/repository.dart';
 
 /// 2) Use Case 하나만 만들고 메서드 구현

@@ -7,8 +7,6 @@ part 'todo.g.dart';
 
 /// entity + model => model? entity?
 /// entity => 폴더를 어디에 위치해야하는가?
-/// model
-///
 @unfreezed
 class Todo with _$Todo {
   Todo._(); //private 생성자가 있어야, 클래스 메서드 추가가 가능
